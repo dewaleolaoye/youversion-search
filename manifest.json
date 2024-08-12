@@ -1,0 +1,22 @@
+{
+  "description": "Add a context menu item to search for highlighted text in YouVersion",
+  "icons": {
+    "16": "/youversion-logo.jpg",
+    "48": "/youversion-logo.jpg",
+    "128": "/youversion-logo.jpg"
+  },
+  "minimum_chrome_version": "6",
+  "manifest_version": 3,
+  "name": "YouVersion Bible Search",
+  "version": "1.0",
+  "action": {
+    "default_icon": "/youversion-logo.jpg",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "popup.js",
+    "type": "module"
+  },
+  "permissions": ["scripting", "contextMenus", "tabs", "activeTab", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}
